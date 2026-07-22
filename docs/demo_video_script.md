@@ -1,144 +1,98 @@
 # Demo Video Script
-## Industrial Knowledge Intelligence Platform (Problem Statement #8)
+## NexusPlant AI — Industrial Command OS (Problem Statement #8)
 ### Target Duration: 3.5 – 4 minutes
 
 ---
 
 ## PRE-RECORDING SETUP CHECKLIST
-- [ ] Run `./venv/bin/python -m streamlit run app.py` and confirm app loads at localhost:8501
+- [ ] Run `./venv/bin/python server.py` and confirm app loads at `http://localhost:8080`
+- [ ] Open `http://localhost:8080` (Landing Page with Typewriter Simulation)
 - [ ] Pre-type the RCA failure description in Notepad so you can paste it quickly
-- [ ] Open the Compliance Auditor tab and confirm the audit has already run (so results show instantly)
-- [ ] Set browser zoom to 90% so all tabs are visible without scrolling
-- [ ] Use a screen recorder at 1920x1080. Record system audio off, narrate separately.
-- [ ] Recommended tool: Loom, OBS, or QuickTime
+- [ ] Set browser zoom to 90% so all UI cards are visible without scrolling
+- [ ] Use a screen recorder at 1920x1080 (Loom, OBS, or QuickTime)
 
 ---
 
-## [SCENE 1] — Title Card
-**Duration: 0:00 – 0:10**
-**On Screen**: Fade in with title card:
-> *"Industrial Knowledge Intelligence Platform"*
-> *"AI-Powered Industrial Knowledge Management (Problem Statement #8)"*
+## [SCENE 1] — Title Card & Landing Page
+**Duration: 0:00 – 0:30**
+**On Screen**: Show the `index.html` main landing page. Point to the **Holographic Command Console** auto-typing simulation loop and hover over the 3D feature module cards.
 
 **Voiceover**:
-> "Industrial plants run on knowledge — maintenance manuals, safety logs, equipment records, and regulatory acts. But in most facilities, that knowledge is fragmented across dozens of disconnected systems. We built an AI platform to change that."
+> "Industrial plants run on knowledge — OEM manuals, safety logs, maintenance records, and regulatory acts. But in most facilities, that knowledge is trapped across disconnected silos. We built NexusPlant AI — an autonomous RAG-driven Industrial Command OS to unify all plant knowledge into a single sub-second operational brain."
 
 ---
 
-## [SCENE 2] — App Overview
-**Duration: 0:10 – 0:30**
-**On Screen**: Show the full Streamlit app. Slowly pan across the 5 tab names at the top. Point to the sidebar showing the indexed document library.
+## [SCENE 2] — Workspace Selection Hub
+**Duration: 0:30 – 1:00**
+**On Screen**: Click **Login to OS** -> Show `workspaces.html` (Plant Workspaces Selection Hub). Show live vector store document listings (14 PDFs, 2 CSVs).
 
 **Voiceover**:
-> "This is the Industrial Knowledge Intelligence Platform — a unified platform built on a hybrid RAG pipeline with three autonomous AI agents. Every document you see in this sidebar — OEM manuals, safety acts, maintenance logs — has been indexed into a persistent vector database with over 1,100 knowledge chunks. All running locally. No cloud. No API cost per query."
+> "Here in the Plant Workspaces Hub, operators select active plant unit workspaces. Every document — OEM pump manuals, compressor guides, safety acts, and work orders — is vectorized into ChromaDB. Let's launch the Command OS Workspace."
 
-**Action**: Hover cursor slowly over each tab name as you say it:
-> "The Maintenance Copilot. The RCA Intelligence Agent. The Knowledge Graph. The Compliance Auditor. And the Benchmark Dashboard."
+**Action**: Click **Launch Command OS Dashboard →**.
 
 ---
 
-## [SCENE 3] — Expert Copilot Tab
-**Duration: 0:30 – 1:10**
-**On Screen**: Click on **💬 Maintenance Copilot** tab.
+## [SCENE 3] — RAG Engineering Copilot Tab
+**Duration: 1:00 – 1:45**
+**On Screen**: Open **`dashboard.html`** -> **Copilot** tab.
 
 **Voiceover**:
-> "Let's start with the Expert Copilot. A field engineer can type any question in plain English — about a specific piece of equipment, a procedure, or a safety rule."
+> "In the Maintenance Copilot tab, a field engineer can ask any technical question in plain English. Let's filter by Pump P-101."
 
-**Action**: Click the **P-102 chip** in the left sidebar to activate asset filter. Then type in the chat input:
-> *"What are the common causes of high vibration in Pump P-102 and how do I fix it?"*
+**Action**: Click **P-101** asset filter chip. Type:
+> *"What are the common causes of high vibration in Pump P-101 and how do I fix it?"*
 
-Hit Enter and wait for the response.
-
-**Voiceover** (while response loads):
-> "The system performs a hybrid search — combining semantic vector similarity with BM25 keyword matching — and retrieves the most relevant chunks from both the OEM centrifugal pump manual and the maintenance logs for this specific asset."
-
-**Action**: Once the response appears, click **🔍 Cited Sources & Snippets** expander to show citation cards.
+Hit Enter.
 
 **Voiceover**:
-> "Every answer is grounded in your actual documents. The engineer sees the exact source file, the page number, and a confidence score. No hallucinations. No guessing."
+> "The system performs a hybrid BM25 + dense vector search across the technical manuals. The answer is synthesized using Groq LPU Llama-3.1-8B hardware inference with exact page citations and confidence scores."
 
 ---
 
-## [SCENE 4] — RCA Intelligence Agent Tab
-**Duration: 1:10 – 2:00**
-**On Screen**: Click on **🔍 RCA Intelligence Agent** tab.
+## [SCENE 4] — Triple-Lookup RCA Agent Tab
+**Duration: 1:45 – 2:30**
+**On Screen**: Click **RCA Agent** tab.
 
 **Voiceover**:
-> "Now imagine a pump has just failed on the plant floor. The maintenance manager needs a root cause analysis — fast. They describe the failure here."
+> "When equipment fails on the plant floor, the RCA Intelligence Agent performs a multi-source diagnostic lookup."
 
-**Action**: Paste into the text area:
-> *"Pump P-102 is vibrating excessively and has developed a minor oil leak from the bearing housing. We have had two similar incidents in the past 6 months."*
-
-Click **Generate Root Cause Analysis Report**.
-
-**Voiceover** (while it processes):
-> "The agent runs a four-step reasoning loop. First it extracts the asset tag and failure mode. Then it simultaneously queries the maintenance log history for this pump, the OEM troubleshooting manual, and any past safety incidents involving similar failure signatures."
-
-**Action**: Once results appear, click through the tabs — **Summary**, **Supporting Evidence**, **Recommended Actions**.
+**Action**: Click sample scenario chip **Pump P-102 Vibration & Seal Leak** and click **Generate Root Cause Analysis Report**.
 
 **Voiceover**:
-> "The output is a fully structured diagnostic report — the probable root cause, supporting evidence from three data sources, and step-by-step corrective actions. What previously took a senior engineer two days of log reading now takes under a minute."
+> "The agent cross-references work order logs, OEM manuals, and prior incident signatures. Notice how the Immediate Recommended Remediation Action Plan is placed prominently at the top, followed by extracted multi-source evidence micro-cards below."
 
 ---
 
 ## [SCENE 5] — Compliance Auditor Tab
-**Duration: 2:00 – 2:50**
-**On Screen**: Click on **📋 Compliance Auditor** tab. Results should already be loaded from your pre-run.
+**Duration: 2:30 – 3:15**
+**On Screen**: Click **Compliance Auditor** tab. Click **Run Compliance & Safety Audit**.
 
 **Voiceover**:
-> "The third agent is the Compliance Auditor — the plant's automated safety officer. It scans the maintenance and incident logs, cross-references every anomaly against the Factories Act, RIDDOR, and HSE guidelines stored in the vector database, and flags violations."
+> "The Compliance Auditor acts as the plant's automated safety officer. It scans maintenance incident logs against the Factories Act 1948 and RIDDOR guidelines."
 
-**Action**: Point to the **4 metrics** at the top — Total Scanned, Safety Score, Gaps Flagged, Latency.
-
-**Voiceover**:
-> "In this scan, the agent identified 4 high-risk operational events — including emergency downtime events and open safety incident reports — and flagged all four as compliance gaps."
-
-**Action**: Click to expand **Anomaly [1]: ML-1032 — Emergency Downtime Event (Pump P-102)**.
+**Action**: Scroll down through the 4 anomaly cards showing cited regulations, audit assessments, and pretty-printed Form F-18 statutory report templates.
 
 **Voiceover**:
-> "For each gap, the agent cites the exact regulatory clause it violated..."
-
-**Action**: Scroll down slowly to show the **Audit Assessment**, then the **Remediation**, then the **Generated Regulatory Notification Form**.
-
-**Voiceover**:
-> "...and auto-generates a pre-filled notification form — ready to submit to the regulator. Safety managers go from days of manual paperwork to a copy-paste."
+> "It calculates a safety scorecard, flags regulatory gaps, and auto-generates official statutory reporting forms ready for regulatory filing."
 
 ---
 
-## [SCENE 6] — Knowledge Graph Tab
-**Duration: 2:50 – 3:20**
-**On Screen**: Click on **🕸️ Knowledge Graph Network** tab.
+## [SCENE 6] — Knowledge Graph & Benchmarks
+**Duration: 3:15 – 3:45**
+**On Screen**: Show **Knowledge Graph** tab (Pyvis Dark Cyber network canvas) and **Benchmarks** tab.
 
 **Voiceover**:
-> "Finally, the Knowledge Graph gives plant managers a visual map of everything the platform knows. Equipment assets, their linked manuals, the failure modes each machine has experienced, and the regulatory documents governing them."
-
-**Action**: Drag a few nodes around to show the interactive physics simulation. Zoom in on the Pump P-102 cluster.
-
-**Voiceover**:
-> "Every relationship here was extracted automatically from the indexed corpus. This is institutional knowledge — the kind that used to live only in the heads of retiring senior engineers — now preserved, queryable, and visual."
+> "The Dark Cyber Knowledge Graph visually maps relationships between equipment tags, OEM manuals, failure modes, and safety acts. Finally, our 20-question Benchmark Suite proves 100% citation accuracy and sub-second response times."
 
 ---
 
-## [SCENE 7] — Benchmark Dashboard (Quick Flash)
-**Duration: 3:20 – 3:35**
-**On Screen**: Click on **📊 System Benchmark Dashboard** tab. Show the 4 metric cards at the top, then the bar chart.
+## [SCENE 7] — Closing
+**Duration: 3:45 – 4:00**
+**On Screen**: Return to landing page or GitHub repo.
 
 **Voiceover**:
-> "We validated the system against a curated set of 20 real engineering queries. Average LLM grader score: 9.1 out of 10. Pass rate: 100%. Average latency: under 2 seconds. Citation accuracy: 100%."
-
----
-
-## [SCENE 8] — Closing
-**Duration: 3:35 – 3:50**
-**On Screen**: Fade back to a clean title card showing:
-> *"Industrial Knowledge Intelligence Platform"*
-> *"Built on: Python · Streamlit · ChromaDB · Llama-3-8B · LangChain"*
-> *"1,161 chunks · 12 documents · 3 agents · 1 unified platform"*
-
-**Voiceover**:
-> "One platform. Three agents. Instant access to the collective knowledge of an entire plant. Every engineer deserves an assistant who never sleeps, never forgets, and always cites their sources. Thank you."
-
-**Action**: Fade to black.
+> "NexusPlant AI — One platform, three agents, instant access to the collective knowledge of an entire plant. Thank you."
 
 ---
 
@@ -146,10 +100,6 @@ Click **Generate Root Cause Analysis Report**.
 
 | Tip | Detail |
 |---|---|
-| **Pace** | Speak slowly and deliberately — aim for 130 words per minute |
-| **Pauses** | Add 1-second pauses after every section heading before narrating |
-| **Mouse** | Move the cursor slowly and deliberately. Avoid rapid jitter. |
-| **Edits** | Record each scene separately and cut together — easier than one take |
-| **Music** | Add a subtle ambient background track at 10–15% volume in post |
-| **Captions** | Add auto-captions in Loom or CapCut for accessibility |
-| **Length** | Keep final cut under 4 minutes — judges typically watch first 3 minutes |
+| **Pace** | Speak slowly and deliberately (~130 words per minute) |
+| **Mouse** | Move the cursor smoothly without rapid jitter |
+| **Length** | Keep final video between 3.5 and 4 minutes |
