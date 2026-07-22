@@ -1,3 +1,5 @@
+flask
+gunicorn
 pdfplumber
 pytesseract
 pandas
@@ -5,10 +7,8 @@ chromadb
 sentence-transformers
 python-dotenv
 groq
-streamlit>=1.35.0
 pyvis>=0.3.2
 networkx>=3.0
 langchain>=0.2.0
 langchain-groq>=0.1.0
 langchain-community>=0.2.0
-torchvision
