@@ -21,10 +21,11 @@ data/processed/chromadb/
 *.log
 *.mp4
 
-# Presentation & PDF Documents (Keep local, do not push to GitHub)
+# Presentation & Local Notes (Keep local, do not push to GitHub)
 ppt.pdf
 ppt.pptx
 techdocument.pdf
+problemstatement.md
 *.pptx
 
 # Local Docs (Keep local, do not push to GitHub except architecture diagram.png)
