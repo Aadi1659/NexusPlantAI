@@ -21,6 +21,12 @@ data/processed/chromadb/
 *.log
 *.mp4
 
+# Local Docs (Keep local, do not push to GitHub except architecture diagram.png)
+docs/*.md
+docs/*.jpg
+docs/*.excalidraw
+docs/*.tex
+
 # OS & IDE Files
 .DS_Store
 .vscode/
@@ -28,6 +34,3 @@ data/processed/chromadb/
 
 # System / Antigravity Logs
 .system_generated/
-
-# Video
-ethackathonvideo.mp4
