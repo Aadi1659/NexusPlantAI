@@ -1,0 +1,370 @@
+{
+  "summary": {
+    "total_queries": 20,
+    "average_latency_sec": 25.905990743637084,
+    "average_score": 3.9,
+    "citation_accuracy_rate": 95.0,
+    "timestamp": "2026-07-10 11:20:50"
+  },
+  "results": [
+    {
+      "id": 1,
+      "query": "What is the maintenance history of Pump P-102?",
+      "reference": "Pump P-102 was serviced multiple times: ML-1004 (Emergency, minor leakage observed, seal replaced), ML-1008 (Corrective, pressure fluctuation, gasket replaced), ML-1009 (Emergency, normal operation, gasket replaced), ML-1014 (Preventive, normal operation, no parts), ML-1016 (Corrective, vibration above threshold), ML-1021 (Predictive, vibration above threshold, filter replaced), ML-1023 (Corrective, vibration above threshold, gasket replaced), etc.",
+      "answer": "Based on the provided maintenance logs, the maintenance history of Pump P-102 is as follows:\n\n- Corrective maintenance:\n  - Date: 2026-01-25, Run Hours: 141, Parts Replaced: Gasket, Downtime: 0.2 hours, Technician: P. Singh, Observation: Pressure fluctuation noted\n  - Date: 2026-03-11, Run Hours: 1101, Parts Replaced: Gasket, Downtime: 0.81 hours, Technician: P. Singh, Observation: Vibration above threshold\n  - Date: 2026-05-07, Run Hours: 1779, Parts Replaced: Seal, Downtime: 1.58 hours, Technician: S. Sharma, Observation: Lubrication topped up\n  - Date: 2026-05-19, Run Hours: 333, Parts Replaced: None, Downtime: 0.33 hours, Technician: R. Kumar, Observation: Pressure fluctuation noted\n\n- Preventive maintenance:\n  - Date: 2026-02-12, Run Hours: 1912, Parts Replaced: None, Downtime: 0.33 hours, Technician: R. Kumar, Observation: Normal operation\n\n- Emergency maintenance:\n  - Date: 2026-01-28, Run Hours: 255, Parts Replaced: Gasket, Downtime: 0.3 hours, Technician: A. Verma, Observation: Normal operation\n\nConfidence level: High\nI am confident in the accuracy of the maintenance history because the information is directly extracted from the provided maintenance logs, which appear to be comprehensive and detailed.",
+      "confidence": "High",
+      "latency": 27.06236505508423,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 1,
+      "reason": "The Assistant Answer contains entirely fabricated maintenance records for Pump P-102, including dates, run hours, parts replaced, downtime, technicians, and observations. The information does not match the reference answer and appears to be generated without any basis in fact."
+    },
+    {
+      "id": 2,
+      "query": "Which technicians worked on C-301 reciprocating compressor?",
+      "reference": "Technicians A. Verma, N. Gupta, R. Kumar, and S. Sharma performed maintenance work on reciprocating compressor C-301.",
+      "answer": "Based on the provided maintenance logs, the technicians who worked on C-301 reciprocating compressor are:\n\n1. S. Sharma (Source [1], Source [3], Source [6])\n2. R. Kumar (Source [2])\n3. N. Gupta (Source [4])\n4. A. Verma (Source [5])\n\nConfidence level: High\nI am confident in my answer because the information is directly extracted from the provided maintenance logs, which clearly mention the technicians who worked on C-301 reciprocating compressor.",
+      "confidence": "High",
+      "latency": 26.000164031982422,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the Reference Answer perfectly, listing the same technicians (A. Verma, N. Gupta, R. Kumar, and S. Sharma) who worked on C-301 reciprocating compressor. The Assistant Answer also provides a clear explanation of its confidence level, citing the maintenance logs as the source of the information."
+    },
+    {
+      "id": 3,
+      "query": "What was observed during the maintenance of Control Valve V-105 on 2026-01-22?",
+      "reference": "Bearing noise was detected, and a bearing was replaced by technician P. Singh (Record ID ML-1007).",
+      "answer": "According to Source [5]: maintenance_log_synthetic.csv (Row 7), during the maintenance of Control Valve V-105 on 2026-01-22, the observation was: \"Bearing noise detected\".\n\nConfidence level: High\nI am confident in my answer because the information is directly extracted from the provided context, specifically from Row 7 of the maintenance_log_synthetic.csv file.",
+      "confidence": "High",
+      "latency": 26.754698991775513,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, matching the reference with minor stylistic differences. The Assistant Answer correctly identifies the observation as 'Bearing noise detected', but lacks the detail about the bearing replacement by technician P. Singh (Record ID ML-1007)."
+    },
+    {
+      "id": 4,
+      "query": "When was maintenance performed on Gate Valve V-203 and what parts were replaced?",
+      "reference": "Maintenance was performed on V-203 on: 2026-01-10 (parts: Gasket, ML-1003), 2026-02-03 (parts: Gasket, ML-1011), 2026-02-09 (parts: Filter, ML-1013), 2026-02-18 (parts: None, ML-1017), 2026-04-25 (parts: Seal, ML-1038), 2026-06-06 (parts: None, ML-1052), 2026-06-21 (parts: Bearing, ML-1057).",
+      "answer": "Based on the provided maintenance logs, the following maintenance activities were performed on Gate Valve V-203:\n\n1. On 2026-01-10, an emergency maintenance was performed by Technician P. Singh. The parts replaced were a Gasket, and the downtime was 1.42 hours.\n2. On 2026-02-03, an emergency maintenance was performed by Technician S. Sharma. The parts replaced were a Gasket, and the downtime was 1.37 hours.\n3. On 2026-02-09, a preventive maintenance was performed by Technician P. Singh. The parts replaced were a Filter, and the downtime was 0.23 hours.\n4. On 2026-02-21, a preventive maintenance was performed by Technician N. Gupta. No parts were replaced, and the downtime was 3.27 hours.\n5. On 2026-04-25, a preventive maintenance was performed by Technician P. Singh. The parts replaced were a Seal, and the downtime was 0.31 hours.\n6. On 2026-06-06, a predictive maintenance was performed by Technician S. Sharma. No parts were replaced, and the downtime was 0.67 hours.\n\nConfidence level: High\nI am confident in my answer because I have directly extracted the information from the provided maintenance logs, which are the primary sources of data for this question.",
+      "confidence": "High",
+      "latency": 25.11916422843933,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 1,
+      "reason": "The Assistant Answer contains entirely wrong information, including incorrect dates, technician names, and maintenance types. The provided maintenance logs were not used correctly, and the Assistant Answer includes hallucinated information such as downtime and maintenance types."
+    },
+    {
+      "id": 5,
+      "query": "How many run hours did Centrifugal Pump P-101 log before its maintenance on 2026-04-10?",
+      "reference": "Centrifugal Pump P-101 logged 236 run hours before its preventive maintenance on 2026-04-10 (Record ID ML-1033).",
+      "answer": "According to Source [1]: maintenance_log_synthetic.csv (Row 33), the Centrifugal Pump P-101 had 236 run hours before its maintenance on 2026-04-10.\n\nConfidence level: High\nReason: The information is directly extracted from the provided maintenance log, which is a reliable source for this type of data.",
+      "confidence": "High",
+      "latency": 26.06412124633789,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the Ground Truth Reference Answer perfectly in terms of both the number of run hours and the maintenance date, indicating a high level of accuracy and reliability in the information extraction process."
+    },
+    {
+      "id": 6,
+      "query": "What is the procedure for handling seal leakages in Goulds 811 pumps according to the IOM manual?",
+      "reference": "According to Goulds Model 811 IOM, users must check the seal chamber, examine the mechanical seal faces for wear, verify alignment, verify flush fluid is flowing, and replace damaged seal components if necessary.",
+      "answer": "According to the IOM manual for Goulds 811 pumps [Source 3: 811_iom.pdf, Page 34], the procedure for handling seal leakages is as follows:\n\n- For pumps with gland with soft sealing, the correct leakage through the gland seal should amount to 60-90 drops per minute. If further gland seal regulation is not possible, packing should be replaced with a new one.\n- For pumps with gland with mechanical sealing, mechanical seals can be used only when the pump is primed with liquid. In case of leakages, it means that the mechanical seal has been damaged.\n\nIt is also mentioned in the manual that slight leakage may cause overheating of the gland seal, damage of the cord, and damage of the shaft protecting sleeves. Major leakage may cause excessive increase of vibrations and pump bearing can be flooded.\n\nConfidence level: High\nThis is because the information is directly extracted from the IOM manual for Goulds 811 pumps, which is a reliable source of information for maintenance procedures.",
+      "confidence": "High",
+      "latency": 26.407748699188232,
+      "cited_sources": [
+        "Source 3: 811_iom.pdf"
+      ],
+      "expected_docs": [
+        "811_iom.pdf"
+      ],
+      "citation_accurate": false,
+      "score": 1,
+      "reason": "The Assistant Answer contains entirely wrong information. The provided steps for handling seal leakages in Goulds 811 pumps do not match the reference answer. The Assistant Answer mentions specific leakage rates and replacement procedures for gland seals, which are not mentioned in the reference answer. Additionally, the reference answer does not mention anything about priming the pump with liquid for mechanical sealing, which is also mentioned in the Assistant Answer. The Assistant Answer also includes unrelated information about potential consequences of leakage, which is not relevant to the procedure for handling seal leakages."
+    },
+    {
+      "id": 7,
+      "query": "What are the rules and guidelines for reporting safety occurrence investigations?",
+      "reference": "Safety occurrence reporting requires immediate notification of high-severity incidents, submission of standard forms, classification of root causes (such as unsafe acts or human error), and establishing corrective actions.",
+      "answer": "Based on the provided context, the rules and guidelines for reporting safety occurrence investigations can be summarized as follows:\n\n1. **Incident Reporting**: All safety occurrences, including near misses, injuries, and minor incidents, should be reported (Source [1], Page 82).\n2. **Reporting Guidelines**: The guidelines should emphasize reporting of unsafe acts and conditions separately, and all reported incidents should be analyzed, rectified, and findings shared with concerned parties (Source [1], Page 82).\n3. **Awareness Programmes**: Awareness programmes on reporting of unsafe acts, unsafe conditions, and incidents should be conducted periodically for the workforce (Source [1], Page 82).\n4. **Timelines for Reporting**: Timelines for reporting incidents should be established (Source [1], Page 82).\n5. **Incident Classification**: Incidents should be classified based on their severity and consequence, using the OISD Incident classification and reporting criterion (Source [1], Annexure 12).\n6. **Reporting Form/Template**: The reporting form/template should be aligned with the incident classification criterion, reporting requirements of statutory and regulatory authorities, and other applicable agencies (Source [1], Page 82).\n7. **System, Procedure, and Tools**: A system, procedure, and tools should be defined to report incidents (Source [1], Page 82).\n8. **Barricading and Securing**: The scene of the incident should be barricaded and secured (Source [1], Page 82).\n9. **Off-the-Job Safety Incidents**: The organization should encourage reporting of off-the-job safety incidents of employees and develop a necessary system for the same (Source [1], Page 82).\n10. **Legislation**: The key legislation that applies to safety occurrence reporting and investigation includes RIDDOR 2013, RIDDOR (NI) 1997, The Merchant Shipping (Accident Reporting and Investigation) Regulations 2012, Armed Forces Act 2006, and Armed Forces (Service Inquiries) Regulations 2008 (Source [2], Page 5).\n11. **RIDDOR Requirements**: RIDDOR requires the reporting of fatalities, specified injuries, dangerous occurrences, and ill health within Great Britain to the Health and Safety Executive (HSE) within defined timescales (Source [2], Page 9).\n12. **Notification and Reporting**: Defence organisations must notify and report all safety occurrences, including fatalities, major injuries, diseases, and dangerous occurrences, to the HSE and other relevant authorities (Source [3], Page 4).\n13. **Investigation**: All safety occurrences must be assessed to determine whether an investigation is required, and if so, to what depth (Source [5], Page 14).\n14. **Investigation Resources**: Defence organisations must ensure that suitable and sufficient resources and arrangements are in place for the investigation of safety occurrences (Source [5], Page 14).\n15. **Investigation Panel**: The Defence organisation's safety management procedures must detail how all occurrences will be investigated, including the composition of any panel necessary to conduct the inquiry (Source [5], Page 15).\n16. **Lessons Learned**: Where any lessons are identified, appropriate correction must be taken (Source [5], Page 15).\n17. **Co-operation**: Defence organisations must ensure that suitable arrangements are in place and there are sufficient resources for the investigation of occurrences, any subsequent formal inquiry, and co-operation with police investigations, etc. (Source [6], Page 19).\n18. **Personnel Awareness**: All personnel should be able to demonstrate that they are aware of the need to report all occurrences, co-operate with any investigation or formal inquiry, and report any work situation that represents a risk of serious or imminent danger to safety without delay (Source [6], Page 19).\n\nThese guidelines and rules provide a comprehensive framework for reporting and investigating safety occurrences in Defence organisations.",
+      "confidence": "High",
+      "latency": 27.534522771835327,
+      "cited_sources": [
+        "1737029789_fa33f264822ba23a495f.pdf",
+        "Safety_occurrence_reporting_and_investigation.pdf"
+      ],
+      "expected_docs": [
+        "Safety_occurrence_reporting_and_investigation.pdf"
+      ],
+      "citation_accurate": true,
+      "score": 2,
+      "reason": "The Assistant Answer is mostly incorrect, missed major facts. While it provides a detailed list of rules and guidelines, it includes many extraneous points that are not relevant to the original question. The Assistant Answer also fails to mention the key points of immediate notification of high-severity incidents, submission of standard forms, classification of root causes, and establishing corrective actions, which are the core requirements for reporting safety occurrence investigations."
+    },
+    {
+      "id": 8,
+      "query": "What does the ACP-SE manual recommend for centrifugal pump bearing lubrication?",
+      "reference": "The ACP-SE centrifugal pump manual outlines lubrication schedules, grease grades, checking bearing housing oil levels, checking for lubrication degradation, and preventing overgreasing which causes heating.",
+      "answer": "The ACP-SE manual recommends two types of lubrication for centrifugal pump bearings: grease lubrication and oil lubrication.\n\nFor grease lubrication, the manual specifies the following:\n- The bearings are filled with grease during works assembly.\n- Before startup, 2 to 10 g of grease must be added.\n- The re-greasing intervals are listed in Table 31, which depends on the bearing size and speed.\n- The re-greasing intervals apply to temperatures < 60\u00b0C and must be observed.\n- Any further increase in the surface temperature of the bearing housing by 15\u00b0C halves the re-greasing interval stated.\n\nFor oil lubrication, the manual specifies the following:\n- The bearings are designed for continuous operation at full load for about 50,000 operating hours.\n- An increased bearing temperature and vibrations on the bearing support are a sign of imminent bearing damage.\n- The recommended lubricants are listed in Tables 32 and 33, which depend on the operating conditions (surface temperature of the bearing housing).\n- For operating conditions where the surface temperature of the bearing housing is around +65\u00b0, use a ISO VG68 (64cST at 40 \u00b0C) oil.\n- For operating conditions where the oil temperature of the bearing housing is around 80\u00b0C, use a ISO VG68 (64cST at 40 \u00b0C) synthetic oil.\n\nConfidence level: High\nI am confident in my answer because the information is directly extracted from the provided manual, which is a reliable source of information for the ACP-SE centrifugal pump.",
+      "confidence": "High",
+      "latency": 26.5265851020813,
+      "cited_sources": [
+        "centrifugal-pump-acp-se-manual-v2-2-en-data.pdf",
+        "centrifugal-pump-acp-se-manual-v2-2-en-data.pdf"
+      ],
+      "expected_docs": [
+        "centrifugal-pump-acp-se-manual-v2-2-en-data.pdf"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer is fully correct, matching the reference facts perfectly. It provides detailed information on both grease and oil lubrication, including specific guidelines, intervals, and recommended lubricants, all of which are accurately extracted from the ACP-SE manual."
+    },
+    {
+      "id": 9,
+      "query": "What maintenance observation was logged for Pump P-102 on 2026-06-12?",
+      "reference": "On 2026-06-12, 'Bearing noise detected' was logged for Pump P-102, with no parts replaced (Record ID ML-1054).",
+      "answer": "The maintenance observation logged for Pump P-102 on 2026-06-12 was 'Bearing noise detected'. \n\nConfidence level: High\nThis is because the information is directly extracted from the provided maintenance log (Source [1], Row 54) which clearly states the observation made on that date.",
+      "confidence": "High",
+      "latency": 25.419270992279053,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, matching the reference answer's main fact. However, it lacks the additional detail about the Record ID ML-1054, which is a minor omission."
+    },
+    {
+      "id": 10,
+      "query": "What incident severity is logged for Report ID INC-2009?",
+      "reference": "Incident Report INC-2009 has severity 'Near Miss - High Potential' occurring in the Compressor Shed, with probable cause 'Slip/trip'.",
+      "answer": "The incident severity for Report ID INC-2009 is Near Miss - High Potential. \n\nSource: near_miss_incident_log_synthetic.csv (Row 9)\n\nConfidence level: High\nReason: The information is directly extracted from the provided source, near_miss_incident_log_synthetic.csv (Row 9), which contains the incident report details, including the severity of the incident.",
+      "confidence": "High",
+      "latency": 25.783146142959595,
+      "cited_sources": [
+        "near_miss_incident_log_synthetic.csv",
+        "workplace-accident-and-incident-investigation-template-2018.pdf"
+      ],
+      "expected_docs": [
+        "near_miss_incident_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, matching the reference with minor stylistic differences. It correctly identifies the incident severity as 'Near Miss - High Potential', but omits the location (Compressor Shed) and probable cause ('Slip/trip') mentioned in the reference answer."
+    },
+    {
+      "id": 11,
+      "query": "Where did safety incident INC-2007 occur and who reported it?",
+      "reference": "Safety incident INC-2007 occurred in the Pump House and was reported by P. Singh.",
+      "answer": "The safety incident INC-2007 occurred in the Pump House. It was reported by P. Singh.\n\nConfidence level: High\nI am confident in my answer because the information is directly provided in the context from Source [1]: near_miss_incident_log_synthetic.csv (Row 7).",
+      "confidence": "High",
+      "latency": 26.95210599899292,
+      "cited_sources": [
+        "near_miss_incident_log_synthetic.csv",
+        "52-Near-Miss-Report-Form-1903.pdf"
+      ],
+      "expected_docs": [
+        "near_miss_incident_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the Reference Answer perfectly, including the location of the incident and the person who reported it, with no minor stylistic differences or omissions."
+    },
+    {
+      "id": 12,
+      "query": "Which document covers the Factories Act 1948 and safety regulations?",
+      "reference": "factory_acta1948-63.pdf contains the provisions of the Factories Act of 1948.",
+      "answer": "The documents that cover the Factories Act 1948 and safety regulations are:\n\n- Source [1]: b878b8d9f3d9abc62fbe0a6c92f606e3.pdf (Page 1)\n- Source [2]: factory_acta1948-63.pdf (Page 1)\n- Source [3]: factory_acta1948-63.pdf (Page 6)\n- Source [4]: b878b8d9f3d9abc62fbe0a6c92f606e3.pdf (Page 6)\n- Source [5]: b878b8d9f3d9abc62fbe0a6c92f606e3.pdf (Page 25)\n- Source [6]: factory_acta1948-63.pdf (Page 36)\n\nThese documents cover various aspects of the Factories Act 1948, including preliminary sections, health regulations, safety regulations, and definitions of terms.\n\nConfidence level: High\nI am confident in my answer because the question is directly related to the provided context, and the documents mentioned are all relevant to the Factories Act 1948 and safety regulations.",
+      "confidence": "High",
+      "latency": 25.40269112586975,
+      "cited_sources": [
+        "b878b8d9f3d9abc62fbe0a6c92f606e3.pdf",
+        "factory_acta1948-63.pdf"
+      ],
+      "expected_docs": [
+        "factory_acta1948-63.pdf"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, matching the reference with minor stylistic differences. The provided documents are indeed relevant to the Factories Act 1948 and safety regulations. However, the Assistant Answer lists multiple sources and pages, whereas the reference only mentions one document (factory_acta1948-63.pdf). The Assistant Answer's confidence level is also justified, as the question is directly related to the provided context."
+    },
+    {
+      "id": 13,
+      "query": "What are the requirements for reporting accidents under the RIDDOR framework?",
+      "reference": "The RIDDOR framework requires reporting of specified workplace injuries, occupational diseases, and dangerous occurrences to the relevant authority within designated timelines.",
+      "answer": "According to the provided context, the requirements for reporting accidents under the RIDDOR framework are as follows:\n\n- Fatal injuries must be reported immediately [Source [4], Page 12].\n- Major injuries (as defined in RIDDOR) must be reported immediately [Source [4], Page 12].\n- Accidents where employees have been absent from work (or moved to other duties as a result of the accident) for greater than three days must be reported within ten days of the accident date [Source [4], Page 12].\n- A 'minor injury' is not reportable and falls outside the requirements, but it is a legal requirement to keep a record of any work-related injury resulting in three to seven consecutive days' incapacitation [Source [6], Page 12].\n- The Defence organisation's procedures must include the reporting of occurrences to the Defence organisation's Incident Notification Cell (INC), the Defence organisation's Safety Centre / Chief Environment and Safety Officer (CESO), and in the case of serious occurrences, notification to the DCDSDO, DAIB, and where applicable PJHQ, the Director DS, and the local TU or Representative of Employee Safety [Source [6], Page 12].\n\nThe information for the initial reporting of an occurrence must include as a minimum:\n- Casualty(s) name and details of injury(s) (if appropriate)\n- Type of platform, equipment and/or activity involved\n- Description of occurrence\n- Location, date and time\n- Status and numbers of any known casualties\n- Parent unit of casualty(s) if known\n- Contact details of person/organisation reporting the occurrence\n- Emergency services attending the scene\n- Which police forces or rescue services notified (military or civilian) and which medical facilities (military or civilian) were involved (if any) [Source [6], Page 12].\n\nConfidence level: High\nI am confident in my answer because the requirements for reporting accidents under the RIDDOR framework are clearly stated in the provided context, specifically in Source [4] and Source [6].",
+      "confidence": "High",
+      "latency": 24.277890920639038,
+      "cited_sources": [
+        "Safety_occurrence_reporting_and_investigation.pdf",
+        "riddor-background-quality-report.pdf"
+      ],
+      "expected_docs": [
+        "riddor-background-quality-report.pdf"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, but it includes some minor stylistic differences and small omissions compared to the Reference Answer. The Assistant Answer correctly identifies the requirements for reporting accidents under the RIDDOR framework, including the types of injuries and occurrences that must be reported, the timelines for reporting, and the information required for the initial reporting of an occurrence. However, the Assistant Answer includes some additional information that is not present in the Reference Answer, such as the specific procedures for reporting occurrences within the Defence organisation. Additionally, the Assistant Answer does not explicitly state that the RIDDOR framework requires reporting of specified workplace injuries, occupational diseases, and dangerous occurrences to the relevant authority within designated timelines, which is a key point in the Reference Answer."
+    },
+    {
+      "id": 14,
+      "query": "What observation was logged for Reciprocating Compressor C-301 in log ML-1026?",
+      "reference": "In record ML-1026 on 2026-03-20, 'Minor leakage observed' was logged, and a bearing was replaced by technician N. Gupta.",
+      "answer": "Minor leakage observed.\n\nConfidence level: High\nThis is because the question is directly answered from the provided context in Source [1]: maintenance_log_synthetic.csv (Row 26).",
+      "confidence": "High",
+      "latency": 25.463576078414917,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, matching the reference with minor omissions. It accurately reports the observation of 'Minor leakage observed' but does not mention the additional detail about the bearing replacement by technician N. Gupta."
+    },
+    {
+      "id": 15,
+      "query": "What parts were replaced on Control Valve V-105 during the emergency maintenance on 2026-01-16?",
+      "reference": "A Gasket was replaced during the emergency maintenance on Control Valve V-105 on 2026-01-16 (Record ID ML-1005).",
+      "answer": "According to Source [1]: maintenance_log_synthetic.csv (Row 5), the parts replaced on Control Valve V-105 during the emergency maintenance on 2026-01-16 were a Gasket.\n\nConfidence level: High\nReason: The information is directly extracted from the provided maintenance log, which is a primary source of data.",
+      "confidence": "High",
+      "latency": 25.81331205368042,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the Ground Truth Reference Answer perfectly in terms of correctness and factual accuracy, with no minor stylistic differences or omissions."
+    },
+    {
+      "id": 16,
+      "query": "Who reported safety incident INC-2025 at the Storage Tank Area?",
+      "reference": "Safety incident INC-2025 was reported by N. Gupta, with severity 'Property Damage' and probable cause 'Equipment failure'.",
+      "answer": "According to the context, the safety incident INC-2025 at the Storage Tank Area was reported by N. Gupta. \n\nSource: near_miss_incident_log_synthetic.csv (Row 25)\n\nConfidence level: High\nReason: The information is directly mentioned in the provided context, specifically in the incident report for INC-2025.",
+      "confidence": "High",
+      "latency": 26.053285837173462,
+      "cited_sources": [
+        "near_miss_incident_log_synthetic.csv",
+        "1737029789_fa33f264822ba23a495f.pdf"
+      ],
+      "expected_docs": [
+        "near_miss_incident_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the reference answer perfectly, including the name of the person who reported the incident, which is directly mentioned in the provided context."
+    },
+    {
+      "id": 17,
+      "query": "What is the next scheduled maintenance date for Gate Valve V-203 after ML-1011?",
+      "reference": "The next scheduled maintenance for Gate Valve V-203 after ML-1011 (dated 2026-02-03) is 2026-05-04.",
+      "answer": "Based on the maintenance logs provided, the next scheduled maintenance date for Gate Valve V-203 after ML-1011 is 2026-05-04.\n\nConfidence level: High\nThis is because the information is directly extracted from the maintenance log for ML-1011, which explicitly states the next scheduled maintenance date as 2026-05-04.",
+      "confidence": "High",
+      "latency": 25.63823676109314,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the reference answer perfectly, with no discrepancies or omissions. The information is directly extracted from the maintenance log, indicating a high level of confidence and accuracy."
+    },
+    {
+      "id": 18,
+      "query": "What is the run hour count for Pump P-101 in ML-1049?",
+      "reference": "In ML-1049, Centrifugal Pump P-101 had logged 546 run hours since its last maintenance.",
+      "answer": "The run hour count for Pump P-101 in ML-1049 is 546.\n\nConfidence level: High\nThis is because the information is directly extracted from the provided context, specifically from Source [1]: maintenance_log_synthetic.csv (Row 49).",
+      "confidence": "High",
+      "latency": 25.539304971694946,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the reference answer perfectly in terms of both content and formatting, indicating a high level of accuracy and attention to detail."
+    },
+    {
+      "id": 19,
+      "query": "What safety occurrence template or guidelines does hsg245 discuss?",
+      "reference": "hsg245.pdf discusses the health and safety executive guide to investigating accidents and incidents at work.",
+      "answer": "According to Source [1]: hsg245.pdf (Page 88), the guidance is available at www.hse.gov.uk/pubns/books/hsg245.htm. However, this source does not explicitly mention a safety occurrence template or guidelines.\n\nBut, according to Source [4]: 52-Near-Miss-Report-Form-1903.pdf (Page 3), the document references HSG245 as a guide for investigating accidents and incidents. \n\nAdditionally, according to Source [5]: hsg245.pdf (Page 27), the document is a guide to the Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 1995, which implies that it may discuss safety occurrence reporting guidelines.\n\nHowever, a more specific safety occurrence template or guidelines are discussed in Source [2]: Safety_occurrence_reporting_and_investigation.pdf (Page 24), which categorizes safety occurrences into accidents, incidents, near misses, and hazards.\n\nTherefore, while HSG245 may discuss safety occurrence reporting guidelines, a more specific template or guidelines are discussed in Source [2].",
+      "confidence": "Medium",
+      "latency": 25.759870052337646,
+      "cited_sources": [
+        "hsg245.pdf",
+        "Safety_occurrence_reporting_and_investigation.pdf"
+      ],
+      "expected_docs": [
+        "hsg245.pdf"
+      ],
+      "citation_accurate": true,
+      "score": 4,
+      "reason": "The Assistant Answer is mostly correct, as it correctly identifies the topic of HSG245 as a guide to investigating accidents and incidents at work. However, it incorrectly implies that HSG245 does not explicitly mention a safety occurrence template or guidelines, when in fact it may discuss safety occurrence reporting guidelines. The correct answer is that HSG245 discusses safety occurrence reporting guidelines, but a more specific template or guidelines are discussed in another source."
+    },
+    {
+      "id": 20,
+      "query": "Who performed the corrective maintenance on Pump P-102 on 2026-05-07?",
+      "reference": "Technician S. Sharma performed the corrective maintenance on Pump P-102 on 2026-05-07 (Record ID ML-1042), replacing the seal.",
+      "answer": "The technician who performed the corrective maintenance on Pump P-102 on 2026-05-07 was S. Sharma.\n\nConfidence level: High\nThis is because the information is directly extracted from the maintenance log (Source [1], Row 42), which clearly states the technician's name as S. Sharma.",
+      "confidence": "High",
+      "latency": 24.54775381088257,
+      "cited_sources": [
+        "maintenance_log_synthetic.csv",
+        "maintenance_log_synthetic.csv"
+      ],
+      "expected_docs": [
+        "maintenance_log_synthetic.csv"
+      ],
+      "citation_accurate": true,
+      "score": 5,
+      "reason": "The Assistant Answer matches the Reference Answer perfectly in terms of correctness and factual accuracy, including the technician's name and the date of the maintenance. The confidence level is also justified by the direct extraction from the maintenance log."
+    }
+  ]
+}

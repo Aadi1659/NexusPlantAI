@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100%;
+                 background-color: #060911;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+        <style>
+            html, body { background-color: #060911 !important; margin: 0; padding: 0; overflow: hidden; font-family: 'JetBrains Mono', monospace !important; }
+            #mynetwork { background-color: #060911 !important; width: 100vw; height: 100vh; border: none; }
+            div.vis-network { outline: none !important; }
+        </style>
+        </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": {"background": "#FF9900", "border": "#FFD000", "highlight": {"background": "#FFB800", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "P-101", "label": "P-101", "shape": "dot", "size": 36, "title": "EQUIPMENT: P-101"}, {"color": {"background": "#FF9900", "border": "#FFD000", "highlight": {"background": "#FFB800", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "P-102", "label": "P-102", "shape": "dot", "size": 36, "title": "EQUIPMENT: P-102"}, {"color": {"background": "#FF9900", "border": "#FFD000", "highlight": {"background": "#FFB800", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "V-105", "label": "V-105", "shape": "dot", "size": 36, "title": "EQUIPMENT: V-105"}, {"color": {"background": "#FF9900", "border": "#FFD000", "highlight": {"background": "#FFB800", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "V-203", "label": "V-203", "shape": "dot", "size": 36, "title": "EQUIPMENT: V-203"}, {"color": {"background": "#FF9900", "border": "#FFD000", "highlight": {"background": "#FFB800", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "C-301", "label": "C-301", "shape": "dot", "size": 36, "title": "EQUIPMENT: C-301"}, {"color": {"background": "#8B5CF6", "border": "#C4B5FD", "highlight": {"background": "#A78BFA", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "centrifugal-pump-manual.pdf", "label": "centrifugal-pump-manual.pdf", "shape": "box", "size": 22, "title": "DOCUMENT: centrifugal-pump-manual.pdf"}, {"color": {"background": "#8B5CF6", "border": "#C4B5FD", "highlight": {"background": "#A78BFA", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "811_iom.pdf", "label": "811_iom.pdf", "shape": "box", "size": 22, "title": "DOCUMENT: 811_iom.pdf"}, {"color": {"background": "#8B5CF6", "border": "#C4B5FD", "highlight": {"background": "#A78BFA", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "factory_acta1948-63.pdf", "label": "factory_acta1948-63.pdf", "shape": "box", "size": 22, "title": "DOCUMENT: factory_acta1948-63.pdf"}, {"color": {"background": "#8B5CF6", "border": "#C4B5FD", "highlight": {"background": "#A78BFA", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "hsg245.pdf", "label": "hsg245.pdf", "shape": "box", "size": 22, "title": "DOCUMENT: hsg245.pdf"}, {"color": {"background": "#8B5CF6", "border": "#C4B5FD", "highlight": {"background": "#A78BFA", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "riddor-report.pdf", "label": "riddor-report.pdf", "shape": "box", "size": 22, "title": "DOCUMENT: riddor-report.pdf"}, {"color": {"background": "#F43F5E", "border": "#FDA4AF", "highlight": {"background": "#FB7185", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Mechanical Seal Failure", "label": "Mechanical Seal Failure", "shape": "diamond", "size": 30, "title": "FAILURE_MODE: Mechanical Seal Failure"}, {"color": {"background": "#F43F5E", "border": "#FDA4AF", "highlight": {"background": "#FB7185", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Bearing Vibration", "label": "Bearing Vibration", "shape": "diamond", "size": 30, "title": "FAILURE_MODE: Bearing Vibration"}, {"color": {"background": "#F43F5E", "border": "#FDA4AF", "highlight": {"background": "#FB7185", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Thermal ISO Oil Breakdown", "label": "Thermal ISO Oil Breakdown", "shape": "diamond", "size": 30, "title": "FAILURE_MODE: Thermal ISO Oil Breakdown"}, {"color": {"background": "#F43F5E", "border": "#FDA4AF", "highlight": {"background": "#FB7185", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Steam Pressure Peak Leak", "label": "Steam Pressure Peak Leak", "shape": "diamond", "size": 30, "title": "FAILURE_MODE: Steam Pressure Peak Leak"}, {"color": {"background": "#F43F5E", "border": "#FDA4AF", "highlight": {"background": "#FB7185", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "High Temp Valve Trip", "label": "High Temp Valve Trip", "shape": "diamond", "size": 30, "title": "FAILURE_MODE: High Temp Valve Trip"}, {"color": {"background": "#00FF9D", "border": "#6EE7B7", "highlight": {"background": "#34D399", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "ISO VG 46 Oil Flush", "label": "ISO VG 46 Oil Flush", "shape": "hexagon", "size": 30, "title": "REMEDIATION: ISO VG 46 Oil Flush"}, {"color": {"background": "#00FF9D", "border": "#6EE7B7", "highlight": {"background": "#34D399", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Laser Shaft Realignment", "label": "Laser Shaft Realignment", "shape": "hexagon", "size": 30, "title": "REMEDIATION: Laser Shaft Realignment"}, {"color": {"background": "#00FF9D", "border": "#6EE7B7", "highlight": {"background": "#34D399", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "Form F-18 Report Filing", "label": "Form F-18 Report Filing", "shape": "hexagon", "size": 30, "title": "REMEDIATION: Form F-18 Report Filing"}, {"color": {"background": "#00FF9D", "border": "#6EE7B7", "highlight": {"background": "#34D399", "border": "#FFFFFF"}}, "font": {"color": "#FFFFFF"}, "id": "RIDDOR Notice Filing", "label": "RIDDOR Notice Filing", "shape": "hexagon", "size": 30, "title": "REMEDIATION: RIDDOR Notice Filing"}]);
+                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "color": "#8B5CF6", "from": "P-101", "title": "Relationship: HAS MANUAL", "to": "centrifugal-pump-manual.pdf", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#F43F5E", "from": "P-101", "title": "Relationship: HAS FAILURE", "to": "Bearing Vibration", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#8B5CF6", "from": "P-102", "title": "Relationship: HAS MANUAL", "to": "centrifugal-pump-manual.pdf", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#F43F5E", "from": "P-102", "title": "Relationship: HAS FAILURE", "to": "Mechanical Seal Failure", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#38BDF8", "from": "V-105", "title": "Relationship: GOVERNED BY", "to": "factory_acta1948-63.pdf", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#38BDF8", "from": "V-203", "title": "Relationship: GOVERNED BY", "to": "hsg245.pdf", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#F43F5E", "from": "V-203", "title": "Relationship: HAS FAILURE", "to": "Steam Pressure Peak Leak", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#8B5CF6", "from": "C-301", "title": "Relationship: HAS MANUAL", "to": "811_iom.pdf", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#F43F5E", "from": "C-301", "title": "Relationship: HAS FAILURE", "to": "Thermal ISO Oil Breakdown", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#F43F5E", "from": "C-301", "title": "Relationship: HAS FAILURE", "to": "High Temp Valve Trip", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#38BDF8", "from": "factory_acta1948-63.pdf", "title": "Relationship: REGULATORY CODE", "to": "Form F-18 Report Filing", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#38BDF8", "from": "riddor-report.pdf", "title": "Relationship: REGULATORY CODE", "to": "RIDDOR Notice Filing", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#00FF9D", "from": "Mechanical Seal Failure", "title": "Relationship: REMEDIATED BY", "to": "ISO VG 46 Oil Flush", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#00FF9D", "from": "Bearing Vibration", "title": "Relationship: REMEDIATED BY", "to": "Laser Shaft Realignment", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#00FF9D", "from": "Thermal ISO Oil Breakdown", "title": "Relationship: REMEDIATED BY", "to": "ISO VG 46 Oil Flush", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FF9900", "from": "Steam Pressure Peak Leak", "title": "Relationship: CITED IN", "to": "Form F-18 Report Filing", "width": 2.8}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FF9900", "from": "High Temp Valve Trip", "title": "Relationship: STATUTORY NOTICE", "to": "RIDDOR Notice Filing", "width": 2.8}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"color": "#F8FAFC", "size": 13, "face": "JetBrainsMono", "strokeWidth": 3, "strokeColor": "#060911"}, "shadow": {"enabled": true, "color": "rgba(255,153,0,0.5)", "size": 18}}, "edges": {"font": {"color": "transparent", "size": 0}, "smooth": {"type": "cubicBezier", "roundness": 0.4}}, "physics": {"forceAtlas2Based": {"gravitationalConstant": -130, "centralGravity": 0.008, "springLength": 190, "springConstant": 0.05}, "maxVelocity": 45, "solver": "forceAtlas2Based", "timestep": 0.35, "stabilization": {"iterations": 200}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

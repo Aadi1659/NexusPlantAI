@@ -1,0 +1,33 @@
+# Environment variables & secrets
+.env
+*.env
+.env.*
+
+# Python Virtual Environments
+venv/
+env/
+ENV/
+.venv
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Data & Database files
+data/processed/chromadb/
+*.sqlite3
+*.log
+*.mp4
+
+# OS & IDE Files
+.DS_Store
+.vscode/
+.idea/
+
+# System / Antigravity Logs
+.system_generated/
+
+# Video
+ethackathonvideo.mp4
